@@ -7,6 +7,6 @@ const { historyChat } = require('../controllers/message');
 
 const router = Router();
 
-router.get('/:id', validateJWT, historyChat);
+router.get('/:destinationId', validateJWT, historyChat);
 
 module.exports = router;
