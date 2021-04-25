@@ -1,0 +1,12 @@
+/*
+    path: api/v1/message
+*/
+const { Router } = require('express');
+const { validateJWT } = require('../middlewares/validate-jwt');
+const { historyChat } = require('../controllers/message');
+
+const router = Router();
+
+router.get('/:id', validateJWT, historyChat);
+
+module.exports = router;
